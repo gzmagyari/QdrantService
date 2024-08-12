@@ -24,7 +24,7 @@ mkdir -p "$QDRANT_BASE_DIR"
 mkdir -p "$QDRANT_STORAGE_DIR"
 
 # Start the Qdrant container in the background and log output
-docker run -d -p 6333:6333 -v "$QDRANT_STORAGE_DIR:/qdrant/storage" qdrant/qdrant &> "$QDRANT_LOG_FILE" &
+docker run -d -p 6333:6333 -v "$QDRANT_STORAGE_DIR:/qdrant/storage" qdrant/qdrant &> "$QDRANT_LOG_FILE"
 
 # Print message
 echo "Qdrant is starting, logs can be found in $QDRANT_LOG_FILE"
