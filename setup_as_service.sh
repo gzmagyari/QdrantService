@@ -50,6 +50,13 @@ Restart=always
 User=root
 WorkingDirectory=$QDRANT_BASE_DIR
 
+# Resource Limits
+LimitNOFILE=65535
+LimitNPROC=65535
+
+# Extend timeout for service start
+TimeoutStartSec=300
+
 [Install]
 WantedBy=multi-user.target
 EOF
